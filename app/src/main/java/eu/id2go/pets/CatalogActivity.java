@@ -152,7 +152,7 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
             case R.id.action_insert_dummy_data:
                 insertPet();
                 return true;
-            // Respond to a click on the "Delete all entries" menu option
+            // Delete functionality only for Developer database testing!
             case R.id.action_delete_all_entries:
                 deleteAllPets();
                 return true;
@@ -161,7 +161,7 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
     }
 
     /**
-     * Helper method to delete all pets in the database.
+     * Helper method to delete all pets in the database for Developer database testing purposes only!
      */
     private void deleteAllPets() {
         int rowsDeleted = getContentResolver().delete(PetsEntry.CONTENT_URI, null, null);
